@@ -4,9 +4,6 @@ file-uploader is a simple jQuery Drag & Drop File Uploader plugin made to be use
 ## Important notice
 This plugin uses the [DataTransfer API](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer). Therefore, is not a Cross Browser solution. Everything works fine on Chrome, though. See #3 for more details. If this is not a problem to you, feel free to enjoy the plugin.
 
-## Demo
-[Demo page here](https://christianbayer.github.io/file-uploader/)
-
 ## How to use it
 Import the CSS file at the `<head>`:
 ```
