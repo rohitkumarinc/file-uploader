@@ -173,7 +173,7 @@
                 }).appendTo($container),
 
                 // Create the delete button
-                $button = $('<button>', {
+                $button = $('<a>', {
                     class: 'delete-image'
                 }).appendTo($container),
 
