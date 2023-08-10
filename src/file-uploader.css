@@ -1,0 +1,210 @@
+/*! File Uploader - v1.2.3 - 26/11/2019
+ * Copyright (c) 2019 Rohit kumar; Licensed MIT */
+
+/* Icons Font Face*/
+@font-face {
+    font-family: 'File Uploader Icons';
+    src: url('../fonts/iu.eot');
+    src: url('../fonts/iu.eot') format('embedded-opentype'),
+        url('../fonts/iu.ttf') format('truetype'),
+        url('../fonts/iu.woff') format('woff'),
+        url('../fonts/iu.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Icons class */
+[class^="iui-"],
+[class*="iui-"] {
+    font-family: 'File Uploader Icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon Close */
+.iui-close:before {
+    content: "\e900";
+}
+
+/* Icon Cloud Upload */
+.iui-cloud-upload:before {
+    content: "\e901";
+}
+
+/* Base style */
+.file-uploader {
+    min-height: 10rem;
+    border: 1px solid #d9d9d9;
+    position: relative;
+}
+
+/* Style on hover */
+.file-uploader.drag-over {
+    background-color: #f3f3f3;
+}
+
+/* Hide the file input */
+.file-uploader input[type="file"] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Text container */
+.file-uploader .upload-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.file-uploader .upload-text i {
+    display: block;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.file-uploader .upload-text span {
+    display: block;
+}
+
+/* Hide the text if there is at least one uploaded image */
+.file-uploader.has-files .upload-text {
+    display: none;
+}
+
+/* Uploaded images container */
+.file-uploader .uploaded {
+    line-height: 0;
+    font-weight: bold;
+}
+
+.file-uploader .csd_upload {
+    margin: 10px;
+    height: 85px;
+    border: 8px dashed #e6f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file-uploader .csd_upload p {
+    margin-top: 12px;
+    line-height: 0;
+    font-size: 22px;
+    color: #0c3214;
+    letter-spacing: 1.5px;
+}
+
+.file-uploader .csd_upload__button {
+    background-color: #e6f5e9;
+    border-radius: 10px;
+    padding: 0px 8px 0px 10px;
+  }
+
+.file-uploader .uploaded .uploaded-image {
+    position: relative;
+    background: #e6f5e9;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+}
+
+.file-uploader .uploaded .uploaded-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+/* Delete image button */
+.file-uploader .uploaded .uploaded-image .delete-image {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border-radius: 50%;
+    padding: .3rem;
+    line-height: 1;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-appearance: none;
+    border: none;
+    transform: translateY(-50%);
+}
+
+.file-uploader .uploaded .uploaded-image:hover .delete-image {
+    display: block;
+}
+
+.file-uploader .uploaded .uploaded-image .delete-image i {
+    display: block;
+    color: #fff;
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+@media screen and (max-width: 1366px) {
+    .file-uploader .uploaded .uploaded-image {
+        width: calc(20% - 1rem);
+        padding-bottom: calc(20% - 1rem);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .file-uploader .uploaded {
+        padding: .4rem;
+    }
+
+    .file-uploader .uploaded .uploaded-image {
+        width: calc(25% - .8rem);
+        padding-bottom: calc(25% - .4rem);
+        margin: .4rem;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    .file-uploader .uploaded {
+        padding: .3rem;
+    }
+
+    .file-uploader .uploaded .uploaded-image {
+        width: calc(33.3333333333% - .6rem);
+        padding-bottom: calc(33.3333333333% - .3rem);
+        margin: .3rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .file-uploader .uploaded {
+        padding: .2rem;
+    }
+
+    .file-uploader .uploaded .uploaded-image {
+        width: calc(50% - .4rem);
+        padding-bottom: calc(50% - .4rem);
+        margin: .2rem;
+    }
+}
